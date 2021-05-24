@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/contest-admin/contest-admin.iml" filepath="$PROJECT_DIR$/contest-admin/contest-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contest-api/contest-api.iml" filepath="$PROJECT_DIR$/contest-api/contest-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contest-customer/contest-customer.iml" filepath="$PROJECT_DIR$/contest-customer/contest-customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contest-manage.iml" filepath="$PROJECT_DIR$/contest-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contest-student/contest-student.iml" filepath="$PROJECT_DIR$/contest-student/contest-student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contest-teacher/contest-teacher.iml" filepath="$PROJECT_DIR$/contest-teacher/contest-teacher.iml" />
+    </modules>
+  </component>
+</project>
