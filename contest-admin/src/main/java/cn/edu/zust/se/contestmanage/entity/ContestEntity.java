@@ -22,8 +22,8 @@ public class ContestEntity {
     private String name;
     @Column
     private String sponsor;
-    @Column(name = "memebet_limit")
-    private int memberLimit;
+    @Column(name = "number_limit")
+    private int numberLimit;
     @Column(name = "register_start_time")
     private Date registerStartTime;
     @Column(name = "register_end_time")
@@ -41,7 +41,7 @@ public class ContestEntity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", sponsor='" + sponsor + '\'' +
-                ", number_limit=" + memberLimit +
+                ", number_limit=" + numberLimit +
                 ", register_start_time=" + registerStartTime +
                 ", register_end_time=" + registerEndTime +
                 ", contest_start_time=" + contestStartTime +

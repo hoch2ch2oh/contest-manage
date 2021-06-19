@@ -7,9 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-
-import javax.persistence.*;
-
 @Data
 @ApiModel("管理员用户")
 public class AdminDto {

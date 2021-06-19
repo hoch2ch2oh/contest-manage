@@ -4,11 +4,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/contest-api/pom.xml" />
         <option value="$PROJECT_DIR$/contest-admin/pom.xml" />
         <option value="$PROJECT_DIR$/contest-customer/pom.xml" />
         <option value="$PROJECT_DIR$/contest-student/pom.xml" />
         <option value="$PROJECT_DIR$/contest-teacher/pom.xml" />
+        <option value="$PROJECT_DIR$/contest-api/pom.xml" />
       </list>
     </option>
   </component>

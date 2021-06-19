@@ -1,6 +1,8 @@
 package cn.edu.zust.se.contestmanage.dao;
 
 import cn.edu.zust.se.contestmanage.entity.TeacherEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,4 +10,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface TeacherDao extends JpaRepository<TeacherEntity, Integer> {
 
+    Page<TeacherEntity> findByTrueNameLike(String s, Pageable pageable);
+
+    Page<TeacherEntity> findByDepartmentLike(String s, Pageable pageable);
+
+    Page<TeacherEntity> findByProfessionalTitleLike(String s, Pageable pageable);
+
+    TeacherEntity findByTrueNameAndPassword(String loginName, String password);
 }

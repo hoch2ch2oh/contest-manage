@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="contest-admin:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/contest_admin_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="contest-admin/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="contest-admin" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

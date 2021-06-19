@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
  * @author zy 2021/5/24
@@ -23,6 +22,8 @@ public class TeamEntity {
     private int teamNumber;
     @Column
     private String description;
+    @Column
+    private int cid;
     @Column(name = "s_check")
     private int sCheck;
     @Column(name = "t_check")

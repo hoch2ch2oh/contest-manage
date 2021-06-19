@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
  * @author zy 2021/5/24
@@ -27,7 +26,7 @@ public class StudentEntity {
     private String department;
     @Column
     private String major;
-    @Column(name = "class")
+//    @Column(name = "class")
     private String clazz;
     @Column
     private String phone;

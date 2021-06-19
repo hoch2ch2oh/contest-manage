@@ -1,18 +1,14 @@
 package cn.edu.zust.se.contestmanage.dto;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
-
-import javax.persistence.*;
+import lombok.Data;
 
 /**
  * @author zy 2021/5/24
  */
-@Setter
-@Getter
-@Entity
-@Table(name = "team", schema = "keshe", catalog = "")
+@Data
+@ApiModel("团队情况")
 public class TeamDto {
     @ApiModelProperty("团队ID")
     private int id;
@@ -22,6 +18,8 @@ public class TeamDto {
     private int teamNumber;
     @ApiModelProperty("团队描述")
     private String description;
+    @ApiModelProperty("参加的竞赛")
+    private int cid;
     @ApiModelProperty("学生确认人数")
     private int sCheck;
     @ApiModelProperty("教师确认")

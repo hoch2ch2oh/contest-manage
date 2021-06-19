@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
  * @author zy 2021/5/24
@@ -19,8 +18,8 @@ public class T2TEntity {
     private int id;
     @Column
     private int tid;
-    @Column
-    private int teacher_id;
+    @Column(name = "teacher_id")
+    private int teacherId;
 
 
 }

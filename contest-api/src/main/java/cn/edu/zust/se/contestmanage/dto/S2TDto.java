@@ -3,10 +3,6 @@ package cn.edu.zust.se.contestmanage.dto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-import javax.persistence.*;
 
 /**
  * @author zy 2021/5/24
