@@ -124,11 +124,16 @@ public class ContestServiceImpl implements ContestService {
         Pageable pageable = PageRequest.of(pageNum, pageSize);
         Page<ContestEntity> contests = contestDao.findAll(pageable);
         ContestPage cp = new ContestPage();
+        System.out.println("*********************ALL*********************");
+        System.out.println(pageNum+1);
+        System.out.println(pageNum-1);
+        System.out.println(contests.getTotalPages());
+        System.out.println("*********************************************\n");
         cp.setContents(e2d(contests.getContent()));
         cp.setHasNext(contests.hasNext());
-        cp.setNext(contests.nextPageable().getPageNumber()+1);
+        cp.setNext(pageNum+1);
         cp.setHasPrevious(contests.hasPrevious());
-        cp.setPrevious(contests.previousPageable().getPageNumber()+1);
+        cp.setPrevious(pageNum-1);
         cp.setTotalPages(contests.getTotalPages());
         return cp;
     }
@@ -206,9 +211,9 @@ public class ContestServiceImpl implements ContestService {
         ContestPage cp = new ContestPage();
         cp.setContents(e2d(contests.getContent()));
         cp.setHasNext(contests.hasNext());
-        cp.setNext(contests.nextPageable().getPageNumber()+1);
+        cp.setNext(pageNo+1);
         cp.setHasPrevious(contests.hasPrevious());
-        cp.setPrevious(contests.previousPageable().getPageNumber()+1);
+        cp.setPrevious(pageNo-1);
         cp.setTotalPages(contests.getTotalPages());
         return cp;
     }
@@ -278,16 +283,23 @@ public class ContestServiceImpl implements ContestService {
                     }
                 };
                 contests = contestDao.findAll(specification, pageable);
-                cp.setContents(e2d(contests.getContent()));
-                cp.setHasNext(contests.hasNext());
-                cp.setNext(contests.nextPageable().getPageNumber()+1);
-                cp.setHasPrevious(contests.hasPrevious());
-                cp.setPrevious(contests.previousPageable().getPageNumber()+1);
-                cp.setTotalPages(contests.getTotalPages());
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+        cp.setContents(e2d(contests.getContent()));
+        cp.setHasNext(contests.hasNext());
+        cp.setNext(pageNo+1);
+        cp.setHasPrevious(contests.hasPrevious());
+        cp.setPrevious(pageNo-1);
+        cp.setTotalPages(contests.getTotalPages());
+        System.out.println("*********************SEARCH*********************");
+        System.out.println(contests.getContent().size());
+        System.out.println(pageNo+1);
+        System.out.println(pageNo-1);
+        System.out.println(contests.getTotalPages());
+        System.out.println("*********************************************\n");
         return cp;
     }
 

@@ -27,10 +27,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>cn.edu.zust.se.contestmanage</groupId>
-            <artifactId>contestmanage</artifactId>
+            <groupId>cn.edu.zust.se</groupId>
+            <artifactId>contest-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
 
         <dependency>

@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 /**
  * @author zy 2021/5/24
@@ -11,7 +13,7 @@ import lombok.Data;
 
 @Data
 @ApiModel("教师用户")
-public class TeacherDto {
+public class TeacherDto implements Serializable {
     @ApiModelProperty("教师ID")
     private int id;
     @ApiModelProperty("用户密码")

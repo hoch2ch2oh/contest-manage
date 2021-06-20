@@ -5,11 +5,12 @@ import cn.edu.zust.se.contestmanage.dto.TeacherDto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
 @Setter
-public class RegisterForm {
+public class RegisterForm implements Serializable {
     //竞赛id
     private int cid;
     //团队id

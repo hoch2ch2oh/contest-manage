@@ -13,10 +13,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service(version = "${contest.service.version}",application = "${dubbo.application.id}")
+@Transactional
 public class TeacherServiceImpl implements TeacherService {
     
     @Autowired
@@ -73,9 +75,9 @@ public class TeacherServiceImpl implements TeacherService {
         TeacherPage tp = new TeacherPage();
         tp.setContents(e2d(teachers.getContent()));
         tp.setHasNext(teachers.hasNext());
-        tp.setNext(teachers.nextPageable().getPageNumber()+1);
+        tp.setNext(pageNo+1);
         tp.setHasPrevious(teachers.hasPrevious());
-        tp.setPrevious(teachers.previousPageable().getPageNumber()+1);
+        tp.setPrevious(pageNo-1);
         tp.setTotalPages(teachers.getTotalPages());
         return tp;
     }
@@ -104,9 +106,9 @@ public class TeacherServiceImpl implements TeacherService {
         TeacherPage tp = new TeacherPage();
         tp.setContents(e2d(teachers.getContent()));
         tp.setHasNext(teachers.hasNext());
-        tp.setNext(teachers.nextPageable().getPageNumber()+1);
+        tp.setNext(pageNo+1);
         tp.setHasPrevious(teachers.hasPrevious());
-        tp.setPrevious(teachers.previousPageable().getPageNumber()+1);
+        tp.setPrevious(pageNo-1);
         tp.setTotalPages(teachers.getTotalPages());
         return tp;
     }

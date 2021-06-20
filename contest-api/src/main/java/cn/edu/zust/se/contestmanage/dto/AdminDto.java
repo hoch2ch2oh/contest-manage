@@ -7,9 +7,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @ApiModel("管理员用户")
-public class AdminDto {
+public class AdminDto implements Serializable {
     @ApiModelProperty("管理员ID")
     private Integer id;
     @ApiModelProperty("管理员密码")

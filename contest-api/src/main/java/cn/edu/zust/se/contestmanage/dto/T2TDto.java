@@ -4,12 +4,14 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author zy 2021/5/24
  */
 @Data
 @ApiModel("教师收到的组队申请")
-public class T2TDto {
+public class T2TDto implements Serializable {
     @ApiModelProperty("申请ID")
     private int id;
     @ApiModelProperty("团队ID")
