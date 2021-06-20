@@ -4,7 +4,6 @@ import cn.edu.zust.se.contestmanage.dao.StudentDao;
 import cn.edu.zust.se.contestmanage.dao.TeamDao;
 import cn.edu.zust.se.contestmanage.dto.StudentDto;
 import cn.edu.zust.se.contestmanage.entity.StudentEntity;
-import cn.edu.zust.se.contestmanage.form.ContestPage;
 import cn.edu.zust.se.contestmanage.form.StudentPage;
 import cn.edu.zust.se.contestmanage.service.StudentService;
 import org.apache.dubbo.config.annotation.Service;
@@ -79,9 +78,9 @@ public class StudentServiceImpl implements StudentService {
         StudentPage sp = new StudentPage();
         sp.setContents(e2d(students.getContent()));
         sp.setHasNext(students.hasNext());
-        sp.setNext(students.nextPageable().getPageNumber()+1);
+        sp.setNext(pageNo+1);
         sp.setHasPrevious(students.hasPrevious());
-        sp.setPrevious(students.previousPageable().getPageNumber()+1);
+        sp.setPrevious(pageNo-1);
         sp.setTotalPages(students.getTotalPages());
         return sp;
     }
@@ -112,9 +111,9 @@ public class StudentServiceImpl implements StudentService {
             students = studentDao.findByClazzLike("%"+keyword+"%",pageable);
         sp.setContents(e2d(students.getContent()));
         sp.setHasNext(students.hasNext());
-        sp.setNext(students.nextPageable().getPageNumber()+1);
+        sp.setNext(pageNo+1);
         sp.setHasPrevious(students.hasPrevious());
-        sp.setPrevious(students.previousPageable().getPageNumber()+1);
+        sp.setPrevious(pageNo-1);
         sp.setTotalPages(students.getTotalPages());
         return sp;
     }

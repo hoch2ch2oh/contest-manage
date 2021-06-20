@@ -1,7 +1,6 @@
 package cn.edu.zust.se.contestmanage.controller;
 
 import cn.edu.zust.se.contestmanage.dto.TeacherDto;
-import cn.edu.zust.se.contestmanage.entity.TeacherEntity;
 import cn.edu.zust.se.contestmanage.form.TeacherForm;
 import cn.edu.zust.se.contestmanage.form.TeacherPage;
 import cn.edu.zust.se.contestmanage.form.UploadForm;
@@ -10,7 +9,6 @@ import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

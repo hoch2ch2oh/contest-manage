@@ -131,7 +131,7 @@
                         <li th:each="count:${#numbers.sequence(1,totalPage)}" th:value="${count}"><a th:href="@{'/admin/contestList?PageNo='+${count}}" th:text="${count}"></a></li>
 
                         <!-- 下一页 -->
-                        <li th:if="${contests.hasNex}">
+                        <li th:if="${contests.hasNext}">
                             <a th:href="'/admin/contestList?PageNo=' + ${contests.next}">&raquo;</a>
                         </li>
 

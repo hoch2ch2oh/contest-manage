@@ -1,8 +1,6 @@
 package cn.edu.zust.se.contestmanage.controller;
 
 import cn.edu.zust.se.contestmanage.dto.StudentDto;
-import cn.edu.zust.se.contestmanage.entity.StudentEntity;
-import cn.edu.zust.se.contestmanage.form.StudentForm;
 import cn.edu.zust.se.contestmanage.form.StudentPage;
 import cn.edu.zust.se.contestmanage.form.UploadForm;
 import cn.edu.zust.se.contestmanage.service.StudentService;
@@ -10,13 +8,13 @@ import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import cn.edu.zust.se.contestmanage.form.StudentForm;
 
 import javax.servlet.http.HttpSession;
 import java.io.InputStream;

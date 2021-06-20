@@ -9,11 +9,12 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @ApiModel("具体赛事")
-public class ContestDto {
+public class ContestDto implements Serializable {
     @ApiModelProperty("竞赛ID")
     private Integer id;
     @ApiModelProperty("竞赛名称")

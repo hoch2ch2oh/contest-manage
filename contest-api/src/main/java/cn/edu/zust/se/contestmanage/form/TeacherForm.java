@@ -3,9 +3,11 @@ package cn.edu.zust.se.contestmanage.form;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Setter
 @Getter
-public class TeacherForm {
+public class TeacherForm implements Serializable {
     private int id;
     private String password;
     private String confirmPassword;
